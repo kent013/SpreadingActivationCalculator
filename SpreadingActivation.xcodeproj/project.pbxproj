@@ -1,0 +1,428 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7941F5B314B7080400C335C8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7941F5B214B7080400C335C8 /* UIKit.framework */; };
+		7941F5B514B7080400C335C8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7941F5B414B7080400C335C8 /* Foundation.framework */; };
+		7941F5B714B7080400C335C8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7941F5B614B7080400C335C8 /* CoreGraphics.framework */; };
+		7941F5BD14B7080400C335C8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7941F5BB14B7080400C335C8 /* InfoPlist.strings */; };
+		7941F5BF14B7080400C335C8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7941F5BE14B7080400C335C8 /* main.m */; };
+		7941F5C314B7080400C335C8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7941F5C214B7080400C335C8 /* AppDelegate.m */; };
+		7941F5CB14B7080400C335C8 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7941F5CA14B7080400C335C8 /* SenTestingKit.framework */; };
+		7941F5CC14B7080400C335C8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7941F5B214B7080400C335C8 /* UIKit.framework */; };
+		7941F5CD14B7080400C335C8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7941F5B414B7080400C335C8 /* Foundation.framework */; };
+		7941F5D514B7080400C335C8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7941F5D314B7080400C335C8 /* InfoPlist.strings */; };
+		7941F5D814B7080400C335C8 /* SpreadingActivationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7941F5D714B7080400C335C8 /* SpreadingActivationTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7941F5CE14B7080400C335C8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7941F5A514B7080400C335C8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7941F5AD14B7080400C335C8;
+			remoteInfo = SpreadingActivation;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7941F5AE14B7080400C335C8 /* SpreadingActivation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpreadingActivation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7941F5B214B7080400C335C8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7941F5B414B7080400C335C8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7941F5B614B7080400C335C8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7941F5BA14B7080400C335C8 /* SpreadingActivation-Info.plist */ = {isa = PBXFileReference; path = "SpreadingActivation-Info.plist"; sourceTree = "<group>"; };
+		7941F5BC14B7080400C335C8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7941F5BE14B7080400C335C8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7941F5C014B7080400C335C8 /* SpreadingActivation-Prefix.pch */ = {isa = PBXFileReference; path = "SpreadingActivation-Prefix.pch"; sourceTree = "<group>"; };
+		7941F5C114B7080400C335C8 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		7941F5C214B7080400C335C8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7941F5C914B7080400C335C8 /* SpreadingActivationTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpreadingActivationTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7941F5CA14B7080400C335C8 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		7941F5D214B7080400C335C8 /* SpreadingActivationTests-Info.plist */ = {isa = PBXFileReference; path = "SpreadingActivationTests-Info.plist"; sourceTree = "<group>"; };
+		7941F5D414B7080400C335C8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7941F5D614B7080400C335C8 /* SpreadingActivationTests.h */ = {isa = PBXFileReference; path = SpreadingActivationTests.h; sourceTree = "<group>"; };
+		7941F5D714B7080400C335C8 /* SpreadingActivationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpreadingActivationTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7941F5AB14B7080400C335C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7941F5B314B7080400C335C8 /* UIKit.framework in Frameworks */,
+				7941F5B514B7080400C335C8 /* Foundation.framework in Frameworks */,
+				7941F5B714B7080400C335C8 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7941F5C514B7080400C335C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7941F5CB14B7080400C335C8 /* SenTestingKit.framework in Frameworks */,
+				7941F5CC14B7080400C335C8 /* UIKit.framework in Frameworks */,
+				7941F5CD14B7080400C335C8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7941F5A314B7080400C335C8 = {
+			isa = PBXGroup;
+			children = (
+				7941F5B814B7080400C335C8 /* SpreadingActivation */,
+				7941F5D014B7080400C335C8 /* SpreadingActivationTests */,
+				7941F5B114B7080400C335C8 /* Frameworks */,
+				7941F5AF14B7080400C335C8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7941F5AF14B7080400C335C8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7941F5AE14B7080400C335C8 /* SpreadingActivation.app */,
+				7941F5C914B7080400C335C8 /* SpreadingActivationTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7941F5B114B7080400C335C8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7941F5B214B7080400C335C8 /* UIKit.framework */,
+				7941F5B414B7080400C335C8 /* Foundation.framework */,
+				7941F5B614B7080400C335C8 /* CoreGraphics.framework */,
+				7941F5CA14B7080400C335C8 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7941F5B814B7080400C335C8 /* SpreadingActivation */ = {
+			isa = PBXGroup;
+			children = (
+				7941F5C114B7080400C335C8 /* AppDelegate.h */,
+				7941F5C214B7080400C335C8 /* AppDelegate.m */,
+				7941F5B914B7080400C335C8 /* Supporting Files */,
+			);
+			path = SpreadingActivation;
+			sourceTree = "<group>";
+		};
+		7941F5B914B7080400C335C8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7941F5BA14B7080400C335C8 /* SpreadingActivation-Info.plist */,
+				7941F5BB14B7080400C335C8 /* InfoPlist.strings */,
+				7941F5BE14B7080400C335C8 /* main.m */,
+				7941F5C014B7080400C335C8 /* SpreadingActivation-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7941F5D014B7080400C335C8 /* SpreadingActivationTests */ = {
+			isa = PBXGroup;
+			children = (
+				7941F5D614B7080400C335C8 /* SpreadingActivationTests.h */,
+				7941F5D714B7080400C335C8 /* SpreadingActivationTests.m */,
+				7941F5D114B7080400C335C8 /* Supporting Files */,
+			);
+			path = SpreadingActivationTests;
+			sourceTree = "<group>";
+		};
+		7941F5D114B7080400C335C8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7941F5D214B7080400C335C8 /* SpreadingActivationTests-Info.plist */,
+				7941F5D314B7080400C335C8 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7941F5AD14B7080400C335C8 /* SpreadingActivation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7941F5DB14B7080400C335C8 /* Build configuration list for PBXNativeTarget "SpreadingActivation" */;
+			buildPhases = (
+				7941F5AA14B7080400C335C8 /* Sources */,
+				7941F5AB14B7080400C335C8 /* Frameworks */,
+				7941F5AC14B7080400C335C8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SpreadingActivation;
+			productName = SpreadingActivation;
+			productReference = 7941F5AE14B7080400C335C8 /* SpreadingActivation.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7941F5C814B7080400C335C8 /* SpreadingActivationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7941F5DE14B7080400C335C8 /* Build configuration list for PBXNativeTarget "SpreadingActivationTests" */;
+			buildPhases = (
+				7941F5C414B7080400C335C8 /* Sources */,
+				7941F5C514B7080400C335C8 /* Frameworks */,
+				7941F5C614B7080400C335C8 /* Resources */,
+				7941F5C714B7080400C335C8 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7941F5CF14B7080400C335C8 /* PBXTargetDependency */,
+			);
+			name = SpreadingActivationTests;
+			productName = SpreadingActivationTests;
+			productReference = 7941F5C914B7080400C335C8 /* SpreadingActivationTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7941F5A514B7080400C335C8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 7941F5A814B7080400C335C8 /* Build configuration list for PBXProject "SpreadingActivation" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7941F5A314B7080400C335C8;
+			productRefGroup = 7941F5AF14B7080400C335C8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7941F5AD14B7080400C335C8 /* SpreadingActivation */,
+				7941F5C814B7080400C335C8 /* SpreadingActivationTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7941F5AC14B7080400C335C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7941F5BD14B7080400C335C8 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7941F5C614B7080400C335C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7941F5D514B7080400C335C8 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7941F5C714B7080400C335C8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7941F5AA14B7080400C335C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7941F5BF14B7080400C335C8 /* main.m in Sources */,
+				7941F5C314B7080400C335C8 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7941F5C414B7080400C335C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7941F5D814B7080400C335C8 /* SpreadingActivationTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7941F5CF14B7080400C335C8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7941F5AD14B7080400C335C8 /* SpreadingActivation */;
+			targetProxy = 7941F5CE14B7080400C335C8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7941F5BB14B7080400C335C8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7941F5BC14B7080400C335C8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		7941F5D314B7080400C335C8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7941F5D414B7080400C335C8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7941F5D914B7080400C335C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7941F5DA14B7080400C335C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7941F5DC14B7080400C335C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SpreadingActivation/SpreadingActivation-Prefix.pch";
+				INFOPLIST_FILE = "SpreadingActivation/SpreadingActivation-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7941F5DD14B7080400C335C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SpreadingActivation/SpreadingActivation-Prefix.pch";
+				INFOPLIST_FILE = "SpreadingActivation/SpreadingActivation-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		7941F5DF14B7080400C335C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SpreadingActivation.app/SpreadingActivation";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SpreadingActivation/SpreadingActivation-Prefix.pch";
+				INFOPLIST_FILE = "SpreadingActivationTests/SpreadingActivationTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		7941F5E014B7080400C335C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SpreadingActivation.app/SpreadingActivation";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SpreadingActivation/SpreadingActivation-Prefix.pch";
+				INFOPLIST_FILE = "SpreadingActivationTests/SpreadingActivationTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7941F5A814B7080400C335C8 /* Build configuration list for PBXProject "SpreadingActivation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7941F5D914B7080400C335C8 /* Debug */,
+				7941F5DA14B7080400C335C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7941F5DB14B7080400C335C8 /* Build configuration list for PBXNativeTarget "SpreadingActivation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7941F5DC14B7080400C335C8 /* Debug */,
+				7941F5DD14B7080400C335C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		7941F5DE14B7080400C335C8 /* Build configuration list for PBXNativeTarget "SpreadingActivationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7941F5DF14B7080400C335C8 /* Debug */,
+				7941F5E014B7080400C335C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7941F5A514B7080400C335C8 /* Project object */;
+}

@@ -19,6 +19,21 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    SpreadingActivationCalculator *calculator = [[SpreadingActivationCalculator alloc] init];
+    calculator.showDebugOutput = YES;
+    NSArray *nodes = 
+    [NSArray arrayWithObjects:
+     [[SpreadingActivationNode alloc] initWithNodeHash:@"0" andExternalValue:1.0],
+     [[SpreadingActivationNode alloc] initWithNodeHash:@"1" andExternalValue:0],
+     [[SpreadingActivationNode alloc] initWithNodeHash:@"2" andExternalValue:0],
+     [[SpreadingActivationNode alloc] initWithNodeHash:@"3" andExternalValue:0],
+     nil];
+    NSMutableArray *edges = 
+    [NSArray arrayWithObjects:
+     [[SpreadingActivationEdge alloc] initWithSource:[nodes objectAtIndex:0] target:[nodes objectAtIndex:1] andWeight:1.0],
+     [[SpreadingActivationEdge alloc] initWithSource:[nodes objectAtIndex:1] target:[nodes objectAtIndex:2] andWeight:1.0],
+     [[SpreadingActivationEdge alloc] initWithSource:[nodes objectAtIndex:2] target:[nodes objectAtIndex:3] andWeight:1.0], nil];
+    nodes = [calculator calculateNodes:nodes andEdges:edges];
     return YES;
 }
 

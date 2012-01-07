@@ -20,9 +20,14 @@
 @property (nonatomic, assign) int maximumStep;
 
 /*!
- * propagation value
+ * decay value
  */
-@property (nonatomic, assign) float propagationValue;
+@property (nonatomic, assign) float decayValue;
+
+/*!
+ * show debug output
+ */
+@property (nonatomic, assign) BOOL showDebugOutput;
 
 - (NSArray *)calculateNodes:(NSArray *)nodes andEdges:(NSArray *)edges;
 @end

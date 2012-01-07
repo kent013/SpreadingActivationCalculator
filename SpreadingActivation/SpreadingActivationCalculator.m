@@ -10,6 +10,9 @@
 #include "Eigen/Core"
 #include <iostream>
 
+using namespace std;
+using namespace Eigen;
+
 //-----------------------------------------------------------------------------
 //Private Implementations
 //-----------------------------------------------------------------------------
@@ -17,9 +20,9 @@
 - (void)setupInitialState;
 - (BOOL)validateNodes:(NSArray *)nodes;
 - (BOOL)validateEdges:(NSArray *)edges;
-- (Eigen::VectorXf)createExternalValueVectorFromNodes:(NSArray *)nodes;
-- (Eigen::MatrixXf)createNetworkMatrixFromNodes:(NSArray *)nodes andEdges:(NSArray *)edges;
-- (Eigen::VectorXf)calculateWorkerAtNumber:(int)t propagationValue:(float)propagationValue previousSum:(float)previousSum networkMatrix:(Eigen::MatrixXf)networkMatrix activationValues:(Eigen::VectorXf)activationValues andExternalValues:(Eigen::VectorXf)externalValues;
+- (VectorXf)createExternalValueVectorFromNodes:(NSArray *)nodes;
+- (MatrixXf)createNetworkMatrixFromNodes:(NSArray *)nodes andEdges:(NSArray *)edges;
+- (VectorXf)calculateWorkerAtNumber:(int)t decayValue:(float)decayValue previousSum:(float)previousSum networkMatrix:(MatrixXf)networkMatrix activationValues:(VectorXf)activationValues andExternalValues:(VectorXf)externalValues;
 @end
 
 @implementation SpreadingActivationCalculator(PrivateImplementation)
@@ -27,7 +30,7 @@
  * private initializer
  */
 - (void)setupInitialState{
-    self.propagationValue = 0.5;
+    self.decayValue = 0.5;
     self.maximumStep = 100;
 }
 
@@ -63,10 +66,10 @@
 /*!
  * create external value vector from nodes array
  * @param nodes array of SpreadingActivationNode
- * @return Eigen::VectorXf vector of external values
+ * @return VectorXf vector of external values
  */
-- (Eigen::VectorXf)createExternalValueVectorFromNodes:(NSArray *)nodes{
-    Eigen::VectorXf v = Eigen::VectorXf::Ones(nodes.count);
+- (VectorXf)createExternalValueVectorFromNodes:(NSArray *)nodes{
+    VectorXf v = VectorXf::Ones(nodes.count);
     int i = 0;
     for(SpreadingActivationNode *node in nodes){
         v(i) = node.externalValue;
@@ -80,8 +83,8 @@
  * @param nodes array of SpreadingActivationNode
  * @param edges two dimentional array of SpreadingActivationEdge
  */
-- (Eigen::MatrixXf)createNetworkMatrixFromNodes:(NSArray *)nodes andEdges:(NSArray *)edges{
-    Eigen::MatrixXf m = Eigen::MatrixXf::Zero(nodes.count, nodes.count);
+- (MatrixXf)createNetworkMatrixFromNodes:(NSArray *)nodes andEdges:(NSArray *)edges{
+    MatrixXf m = MatrixXf::Zero(nodes.count, nodes.count);
     for(SpreadingActivationEdge *edge in edges){
         int s = [nodes indexOfObject: edge.source];
         int t = [nodes indexOfObject: edge.target];
@@ -96,19 +99,19 @@
 /*!
  * calculate one step of spreading activation
  * @param step number
- * @param propagation value
+ * @param decay value
  * @param previous summary
  * @param network matrix
  * @param activation values
  * @param external values
  */
-- (Eigen::VectorXf)calculateWorkerAtNumber:(int)t propagationValue:(float)propagationValue previousSum:(float)previousSum networkMatrix:(Eigen::MatrixXf)networkMatrix activationValues:(Eigen::VectorXf)activationValues andExternalValues:(Eigen::VectorXf)externalValues{
+- (VectorXf)calculateWorkerAtNumber:(int)t decayValue:(float)decayValue previousSum:(float)previousSum networkMatrix:(MatrixXf)networkMatrix activationValues:(VectorXf)activationValues andExternalValues:(VectorXf)externalValues{
     if(t >= self.maximumStep){
         return activationValues;
     }
     int size = activationValues.rows();
-    Eigen::MatrixXf i = Eigen::MatrixXf::Identity(size, size);
-    Eigen::VectorXf a1 = (((1.0 - propagationValue) * i) + (propagationValue * networkMatrix)) * activationValues;
+    MatrixXf i = MatrixXf::Identity(size, size);
+    VectorXf a1 = (((1.0 - decayValue) * i) + (decayValue * networkMatrix)) * activationValues;
     float sum = a1.sum();
     a1 /= sum;
     if(previousSum != 0 && fabsf(sum - previousSum) < 1.0){
@@ -117,10 +120,14 @@
     for(int k = 0; k < size; k++){
         a1(k) += externalValues(k);
     }
-    /*NSLog(@"at %d step", t);
-    std::cout << a1 << std::endl;*/
-    return [self calculateWorkerAtNumber:t + 1 propagationValue:propagationValue previousSum:sum networkMatrix:networkMatrix activationValues:a1 andExternalValues:externalValues];
+    if(self.showDebugOutput){
+        cout << "----------------------------------" << endl;
+        cout << "step " << t << ", sum is " << sum << endl;
+        cout << a1 << endl;
+    }
+    return [self calculateWorkerAtNumber:t + 1 decayValue:decayValue previousSum:sum networkMatrix:networkMatrix activationValues:a1 andExternalValues:externalValues];
 }
+
 @end
 
 //-----------------------------------------------------------------------------
@@ -128,7 +135,8 @@
 //-----------------------------------------------------------------------------
 @implementation SpreadingActivationCalculator
 @synthesize maximumStep;
-@synthesize propagationValue;
+@synthesize decayValue;
+@synthesize showDebugOutput;
 
 /*!
  * initializer
@@ -141,6 +149,15 @@
     }
     
     return self;
+}
+
+/*!
+ * decay value must be 0.0 to 1.0
+ */
+- (void)setdecayValue:(float)indecayValue{
+    NSString *error = [NSString stringWithFormat:@"%s, decay value must be 0.0 to 1.0: %f passed", __PRETTY_FUNCTION__, indecayValue];
+    NSAssert((indecayValue >= 0.0f && indecayValue <= 1.0f), error);
+    decayValue = indecayValue;
 }
 
 /*!
@@ -158,22 +175,33 @@
         return nil;
     }
     
-    Eigen::VectorXf defaultActivationValues = Eigen::VectorXf::Ones(nodes.count);
-    Eigen::VectorXf externalValues = [self createExternalValueVectorFromNodes:nodes];
-    Eigen::MatrixXf networkMatrix = [self createNetworkMatrixFromNodes:nodes andEdges:edges];
+    VectorXf defaultActivationValues = VectorXf::Ones(nodes.count);
+    VectorXf externalValues = [self createExternalValueVectorFromNodes:nodes];
+    MatrixXf networkMatrix = [self createNetworkMatrixFromNodes:nodes andEdges:edges];
     
-    /*
-    std::cout << "default activation values" << std::endl;
-    std::cout << defaultActivationValues << std::endl;
-    std::cout << "external values" << std::endl;
-    std::cout << externalValues << std::endl;
-    std::cout << "network matrix values" << std::endl;
-    std::cout << networkMatrix << std::endl;*/
+    if(self.showDebugOutput){
+        cout << "==================================" << endl;
+        cout << "decayValue: " << self.decayValue << endl;
+        cout << "----------------------------------" << endl;
+        cout << "default activation values" << endl;
+        cout << defaultActivationValues << endl;
+        cout << "external values" << endl;
+        cout << externalValues << endl;
+        cout << "network matrix values" << endl;
+        cout << networkMatrix << endl;
+    }
     
-    Eigen::VectorXf activationValues = [self calculateWorkerAtNumber:0 propagationValue:self.propagationValue previousSum:0.0 networkMatrix:networkMatrix activationValues:defaultActivationValues andExternalValues:externalValues];
+    VectorXf activationValues = [self calculateWorkerAtNumber:0 decayValue:self.decayValue previousSum:0.0 networkMatrix:networkMatrix activationValues:defaultActivationValues andExternalValues:externalValues];
     for(int i = 0; i < activationValues.rows(); i++){
         SpreadingActivationNode *node = [nodes objectAtIndex:i];
         node.activationValue = activationValues(i);
+    }
+    
+    if(self.showDebugOutput){
+        cout << "==================================" << endl;
+        cout << "spreading activation result" << endl;
+        cout << activationValues << endl;
+        cout << "----------------------------------" << endl;
     }
     return nodes;
 }

@@ -27,4 +27,13 @@
     }
     return self;
 }
+
+/*!
+ * set external value
+ * external value must be 0.0 to 1.0
+ */
+- (void)setExternalValue:(float)inExternalValue{
+    NSAssert((inExternalValue >= 0.0f && inExternalValue <= 1.0f), @"%s, external value must be 0.0 to 1.0: %f passed", __PRETTY_FUNCTION__, inExternalValue);
+    externalValue = inExternalValue;
+}
 @end

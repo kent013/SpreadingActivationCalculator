@@ -14,6 +14,7 @@
 @interface SpreadingActivationNode : NSObject
 /*!
  * external default value
+ * value must be 0.0 to 1.0
  */
 @property (nonatomic, assign) float externalValue;
 

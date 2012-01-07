@@ -25,6 +25,7 @@
 
 /*!
  * edge weight
+ * value must be 0.0 to 1.0
  */
 @property (nonatomic, assign) float weight;
 

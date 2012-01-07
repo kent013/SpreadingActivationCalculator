@@ -28,4 +28,13 @@
     }
     return self;
 }
+
+/*!
+ * set weight
+ * weight must be 0.0 to 1.0
+ */
+- (void)setWeight:(float)inWeight{
+    NSAssert((inWeight >= 0.0f && inWeight <= 1.0f), @"%s, Weight must be 0.0 to 1.0: %f passed", __PRETTY_FUNCTION__, inWeight);
+    weight = inWeight;
+}
 @end

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		791D4B1614B80CAB00BAA3DC /* SpreadingActivationCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 791D4B1114B80CAB00BAA3DC /* SpreadingActivationCalculator.m */; };
+		791D4B1714B80CAB00BAA3DC /* SpreadingActivationEdge.m in Sources */ = {isa = PBXBuildFile; fileRef = 791D4B1314B80CAB00BAA3DC /* SpreadingActivationEdge.m */; };
+		791D4B1814B80CAB00BAA3DC /* SpreadingActivationNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 791D4B1514B80CAB00BAA3DC /* SpreadingActivationNode.m */; };
 		7941F5B314B7080400C335C8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7941F5B214B7080400C335C8 /* UIKit.framework */; };
 		7941F5B514B7080400C335C8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7941F5B414B7080400C335C8 /* Foundation.framework */; };
 		7941F5B714B7080400C335C8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7941F5B614B7080400C335C8 /* CoreGraphics.framework */; };
@@ -31,21 +34,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		791D4B1114B80CAB00BAA3DC /* SpreadingActivationCalculator.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = SpreadingActivationCalculator.m; sourceTree = "<group>"; };
+		791D4B1214B80CAB00BAA3DC /* SpreadingActivationEdge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpreadingActivationEdge.h; sourceTree = "<group>"; };
+		791D4B1314B80CAB00BAA3DC /* SpreadingActivationEdge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpreadingActivationEdge.m; sourceTree = "<group>"; };
+		791D4B1414B80CAB00BAA3DC /* SpreadingActivationNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpreadingActivationNode.h; sourceTree = "<group>"; };
+		791D4B1514B80CAB00BAA3DC /* SpreadingActivationNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpreadingActivationNode.m; sourceTree = "<group>"; };
+		791D4B1914B80CB700BAA3DC /* SpreadingActivationCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpreadingActivationCalculator.h; sourceTree = "<group>"; };
 		7941F5AE14B7080400C335C8 /* SpreadingActivation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpreadingActivation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7941F5B214B7080400C335C8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7941F5B414B7080400C335C8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7941F5B614B7080400C335C8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		7941F5BA14B7080400C335C8 /* SpreadingActivation-Info.plist */ = {isa = PBXFileReference; path = "SpreadingActivation-Info.plist"; sourceTree = "<group>"; };
+		7941F5BA14B7080400C335C8 /* SpreadingActivation-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SpreadingActivation-Info.plist"; sourceTree = "<group>"; };
 		7941F5BC14B7080400C335C8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7941F5BE14B7080400C335C8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		7941F5C014B7080400C335C8 /* SpreadingActivation-Prefix.pch */ = {isa = PBXFileReference; path = "SpreadingActivation-Prefix.pch"; sourceTree = "<group>"; };
-		7941F5C114B7080400C335C8 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		7941F5C014B7080400C335C8 /* SpreadingActivation-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SpreadingActivation-Prefix.pch"; sourceTree = "<group>"; };
+		7941F5C114B7080400C335C8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7941F5C214B7080400C335C8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		7941F5C914B7080400C335C8 /* SpreadingActivationTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpreadingActivationTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7941F5CA14B7080400C335C8 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		7941F5D214B7080400C335C8 /* SpreadingActivationTests-Info.plist */ = {isa = PBXFileReference; path = "SpreadingActivationTests-Info.plist"; sourceTree = "<group>"; };
+		7941F5D214B7080400C335C8 /* SpreadingActivationTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SpreadingActivationTests-Info.plist"; sourceTree = "<group>"; };
 		7941F5D414B7080400C335C8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		7941F5D614B7080400C335C8 /* SpreadingActivationTests.h */ = {isa = PBXFileReference; path = SpreadingActivationTests.h; sourceTree = "<group>"; };
+		7941F5D614B7080400C335C8 /* SpreadingActivationTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpreadingActivationTests.h; sourceTree = "<group>"; };
 		7941F5D714B7080400C335C8 /* SpreadingActivationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpreadingActivationTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,6 +115,12 @@
 		7941F5B814B7080400C335C8 /* SpreadingActivation */ = {
 			isa = PBXGroup;
 			children = (
+				791D4B1914B80CB700BAA3DC /* SpreadingActivationCalculator.h */,
+				791D4B1114B80CAB00BAA3DC /* SpreadingActivationCalculator.m */,
+				791D4B1214B80CAB00BAA3DC /* SpreadingActivationEdge.h */,
+				791D4B1314B80CAB00BAA3DC /* SpreadingActivationEdge.m */,
+				791D4B1414B80CAB00BAA3DC /* SpreadingActivationNode.h */,
+				791D4B1514B80CAB00BAA3DC /* SpreadingActivationNode.m */,
 				7941F5C114B7080400C335C8 /* AppDelegate.h */,
 				7941F5C214B7080400C335C8 /* AppDelegate.m */,
 				7941F5B914B7080400C335C8 /* Supporting Files */,
@@ -250,6 +265,9 @@
 			files = (
 				7941F5BF14B7080400C335C8 /* main.m in Sources */,
 				7941F5C314B7080400C335C8 /* AppDelegate.m in Sources */,
+				791D4B1614B80CAB00BAA3DC /* SpreadingActivationCalculator.m in Sources */,
+				791D4B1714B80CAB00BAA3DC /* SpreadingActivationEdge.m in Sources */,
+				791D4B1814B80CAB00BAA3DC /* SpreadingActivationNode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +431,7 @@
 				7941F5DD14B7080400C335C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7941F5DE14B7080400C335C8 /* Build configuration list for PBXNativeTarget "SpreadingActivationTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +440,7 @@
 				7941F5E014B7080400C335C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
